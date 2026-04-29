@@ -1,0 +1,161 @@
+/* Base Styles */
+body {
+    background-color: #f3f4f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 0;
+}
+
+.calculator-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    max-width: 950px;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    color: #1a202c;
+}
+
+header p {
+    color: #718096;
+    margin-top: 5px;
+}
+
+/* Grid Layout */
+.calculator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    margin-top: 2.5rem;
+}
+
+/* Form Styling */
+.input-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #edf2f7;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#calculate-change {
+    background-color: #2d3748;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* The "Total" Display Box */
+#result {
+    background-color: #1a202c;
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.amount-large {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#reset-calculator {
+    background-color: transparent;
+    color: #718096;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Breakdown Panel Styling */
+.denomination-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.denomination-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f7fafc;
+}
+
+.denom-box {
+    width: 55px;
+    height: 35px;
+    background: #edf2f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+.denom-box.coin {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.denom-label {
+    flex-grow: 1;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+/* Target the <p> tags the test requires */
+.denom-count {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0; /* Important to keep rows slim */
+}
+
+/* Visual Container */
+#visual-change-container {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e0;
+    border-radius: 12px;
+    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-text {
+    color: #a0aec0;
+    font-style: italic;
+}

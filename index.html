@@ -1,14 +1,101 @@
 
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <title>Change Calculator</title>
-  </head>
-  <body>
-    <!-- Write your markup here -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <main class="calculator-container">
+        <header>
+            <h1>Change Calculator</h1>
+            <p>Point of Sale Utility - Denomination Breakdown</p>
+        </header>
 
-    <!-- Don't forget to add your <script> tag here -->
+        <div class="calculator-grid">
+            <section class="input-panel">
+                <div class="input-container">
+                    <label for="amount-due">Amount Due ($)</label>
+                    <input type="number" id="amount-due" step="0.01" min="0" placeholder="e.g 12.50">
+                </div>
 
-  </body>
+                <div class="input-container">
+                    <label for="amount-received">Amount Received ($)</label>
+                    <input type="number" id="amount-received" step="0.01" min="0" placeholder="e.g 20.00">
+                </div>
+
+                <button id="calculate-change">Calculate Change</button>
+
+                <div id="result">
+                    <small>Total Change Due</small>
+                    <div class="amount-large">$0.00</div>
+                </div>
+
+                <button id="reset-calculator">Clear Form</button>
+            </section>
+
+            <aside class="breakdown-panel">
+                <h2>Change Breakdown</h2>
+                <ul class="denomination-list">
+                  <!--
+                  <li class="denomination-item">
+                        <span class="denom-box">$20</span>
+                        <span class="denom-label">Dollars</span>
+                        <p id="twenties-output" class="denom-count">0</p>
+                    </li>
+                    <li class="denomination-item">
+                        <span class="denom-box">$10</span>
+                        <span class="denom-label">Dollars</span>
+                        <p id="tens-output" class="denom-count">0</p>
+                    </li>
+                    <li class="denomination-item">
+                        <span class="denom-box">$5</span>
+                        <span class="denom-label">Dollars</span>
+                        <p id="fives-output" class="denom-count">0</p>
+                    </li>
+                    <li class="denomination-item">
+                        <span class="denom-box">$2</span>
+                        <span class="denom-label">Dollars</span>
+                        <p id="twos-output" class="denom-count">0</p>
+                    </li> 
+                      --> 
+                  <li class="denomination-item">
+                        <span class="denom-box">$1</span>
+                        <span class="denom-label">Dollars</span>
+                        <p id="dollars-output" class="denom-count">0</p>
+                    </li>
+                    <li class="denomination-item">
+                        <span class="denom-box coin">25¢</span>
+                        <span class="denom-label">Quarters</span>
+                        <p id="quarters-output" class="denom-count">0</p>
+                    </li>
+                    <li class="denomination-item">
+                        <span class="denom-box coin">10¢</span>
+                        <span class="denom-label">Dimes</span>
+                        <p id="dimes-output" class="denom-count">0</p>
+                    </li>
+                    <li class="denomination-item">
+                        <span class="denom-box coin">5¢</span>
+                        <span class="denom-label">Nickels</span>
+                        <p id="nickels-output" class="denom-count">0</p>
+                    </li>
+                    <li class="denomination-item">
+                        <span class="denom-box coin">1¢</span>
+                        <span class="denom-label">Pennies</span>
+                        <p id="pennies-output" class="denom-count">0</p>
+                    </li>
+                </ul>
+                
+                <!-- <div id="visual-change-container">
+                    <div class="placeholder-text">
+                        <p>Visual representation of change will appear here.</p>
+                    </div>
+                </div> -->
+            </aside>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
 </html>
