@@ -27,7 +27,7 @@ header p {
     margin-top: 5px;
 }
 
-/* Grid Layout */
+
 .calculator-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -144,18 +144,42 @@ input {
 #visual-change-container {
     margin-top: 2rem;
     padding: 2rem;
-    background-color: #f8fafc;
-    border: 2px dashed #cbd5e0;
-    border-radius: 12px;
-    min-height: 150px;
+    background-color: white;
+    border-top: 1px solid #edf2f7; 
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; 
+    gap: 20px;              
 }
 
-.placeholder-text {
-    color: #a0aec0;
-    font-style: italic;
+#visual-change-container img {
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a nice "paper" depth */
+}
+
+.visual-row {
+    display: flex;
+    flex-wrap: wrap;           
+    justify-content: flex-start; 
+    align-items: center;
+    gap: 10px;                 
+    width: 100%;
+}
+
+#visual-change-container img {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    margin: 2px;
+}
+
+.visual-bill {
+    width: 150px;  /* This prevents them from being "large" */
+    height: auto;  /* Maintains the correct proportions */
+    border-radius: 4px;
+}
+
+.visual-coin {
+    width: 50px;   /* Coins should be much smaller than bills */
+    height: 50px;
+    border-radius: 50%; /* Makes them circular */
+    object-fit: cover;  /* Ensures the coin face fills the circle */
 }
