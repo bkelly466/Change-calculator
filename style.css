@@ -35,11 +35,11 @@ header p {
     margin-top: 2.5rem;
 }
 
-/* Form Styling */
 .input-panel {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    margin-top: 5rem;
 }
 
 label {
@@ -70,7 +70,6 @@ input {
     font-size: 1rem;
 }
 
-/* The "Total" Display Box */
 #result {
     background-color: #1a202c;
     color: white;
@@ -94,7 +93,6 @@ input {
     font-weight: 600;
 }
 
-/* Breakdown Panel Styling */
 .denomination-list {
     list-style: none;
     padding: 0;
@@ -133,14 +131,13 @@ input {
     font-weight: 500;
 }
 
-/* Target the <p> tags the test requires */
 .denom-count {
     font-weight: 800;
     font-size: 1.1rem;
-    margin: 0; /* Important to keep rows slim */
+    margin: 0; 
 }
 
-/* Visual Container */
+
 #visual-change-container {
     margin-top: 2rem;
     padding: 2rem;
@@ -154,7 +151,7 @@ input {
 #visual-change-container img {
     display: inline-block;
     margin: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a nice "paper" depth */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
 
 .visual-row {
@@ -172,14 +169,69 @@ input {
 }
 
 .visual-bill {
-    width: 150px;  /* This prevents them from being "large" */
-    height: auto;  /* Maintains the correct proportions */
+    width: 170px;  
+    height: auto;  
     border-radius: 4px;
 }
 
-.visual-coin {
-    width: 50px;   /* Coins should be much smaller than bills */
+.visual-quarter {
+    width: 60px;   
+    height: 60px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+.visual-dime {
+    width: 40px;   
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.visual-nickel {
+    width: 50px;   
     height: 50px;
-    border-radius: 50%; /* Makes them circular */
-    object-fit: cover;  /* Ensures the coin face fills the circle */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.visual-penny {
+    width: 45px;   
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff5f5; 
+    color: #c53030;           
+    padding: 16px 24px;
+    border-radius: 8px;
+    border-left: 5px solid #fc8181;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.alert-hidden {
+    opacity: 0;
+    visibility: hidden;
+    top: -50px !important; 
+}
+
+.alert-visible {
+    opacity: 1;
+    visibility: visible;
+    top: 20px !important;
+}
+
+.alert-icon {
+    font-size: 1.2rem;
 }

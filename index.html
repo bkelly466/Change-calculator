@@ -15,6 +15,10 @@
 
         <div class="calculator-grid">
             <section class="input-panel">
+                <div id="custom-alert" class="alert-hidden">
+                    <span class="alert-icon">⚠️</span>
+                    <span id="alert-message">Insufficient funds provided!</span>
+                </div>
                 <div class="input-container">
                     <label for="amount-due">Amount Due ($)</label>
                     <input type="number" id="amount-due" step="0.01" min="0" placeholder="e.g 12.50">
@@ -38,7 +42,6 @@
             <aside class="breakdown-panel">
                 <h2>Change Breakdown</h2>
                 <ul class="denomination-list">
-                  <!--
                   <li class="denomination-item">
                         <span class="denom-box">$20</span>
                         <span class="denom-label">Dollars</span>
@@ -54,12 +57,13 @@
                         <span class="denom-label">Dollars</span>
                         <p id="fives-output" class="denom-count">0</p>
                     </li>
+                    <!--
                     <li class="denomination-item">
                         <span class="denom-box">$2</span>
                         <span class="denom-label">Dollars</span>
                         <p id="twos-output" class="denom-count">0</p>
                     </li> 
-                      --> 
+                -->
                   <li class="denomination-item">
                         <span class="denom-box">$1</span>
                         <span class="denom-label">Dollars</span>
